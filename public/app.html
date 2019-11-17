@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Max - {( username )}</h1>
+
+    <ul>
+    {% for city in cities %}
+        <li> {{ city }} </li>
+    {% endfor %0}
+    </ul>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>Pupil</th>
+            <th colspan="3">Score</th>
+            <th>Avg</th>
+        </tr>
+    {% for r in score %}
+        <tr>
+            <td> {{ r.name }}</td>
+            {% for s in r.score %}
+            <td> {{ s }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
