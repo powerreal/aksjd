@@ -7,8 +7,12 @@ $loader = new \Twig\Loader\FilesystemLoader(
 );
 $twig = new \Twig\Environment($loader);
 
-include_once '../storage/hotels_dat.php';
+require_once '../storage/hotels_dat.php';
 
-echo $twig->render('gallery.html');
+echo $twig->render('gallery.html',
+    [ 'hotels' => $hotels
+    
+    ]
+);
 
 ?>

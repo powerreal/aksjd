@@ -1,5 +1,18 @@
 {% extends 'pagelayout.html' %}
 
 {% block content %}
-<h1>Gallery</h1>
+    <h1>Gallery</h1>
+
+<div class="row">
+{% for htl in hotels %}
+    <div class="card col-4 border-danger px-2 py-3">
+        <img src="{{htl.url}}" class="card-img-top" alt="">
+        <div class="card-img-overlay">
+          <h4 class="card-title text-white"> {{ htl.title }} </h4>
+        </div>
+          <p class="card-text"> {{ htl.desc }} </p>
+    </div>
+{% endfor %}
+</div>
+
 {% endblock %}
