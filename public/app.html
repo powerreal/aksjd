@@ -29,7 +29,9 @@
             {% for s in r.score %}
             <td> {{ s }}</td>
             {% endfor %}
+            <th> {{ '%.1f'|format{r.avg} }} </th>
         </tr>
+        {% endfor %}
     </table>
 </body>
 </html>
