@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,td{
+            border:1px solid gray;
+            border-collapse: collapse;
+        }
+        a{
+            color: white;
+            background-color: rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <h1> User List </h1>
+    <table>
+        {% for usr in data %}
+        <tr>
+            <td>{{ usr.name }}</td>
+            <td>{{ usr.email }}</td>
+            <td>{{ usr.isActive }}</td>
+            <td>
+                <a href="demodel.php?id={{usr.id }}">
+                    [[X]]
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
