@@ -18,9 +18,15 @@
 </head>
 <body>
     <h1> User List </h1>
+    <a href="demoadd.php">CREATE</a>
     <table>
         {% for usr in data %}
         <tr>
+            <td>
+                <a href="demodel.php?id={{usr.id }}">
+                   [[E]]
+                </a>
+            </td>
             <td>{{ usr.name }}</td>
             <td>{{ usr.email }}</td>
             <td>{{ usr.isActive }}</td>
